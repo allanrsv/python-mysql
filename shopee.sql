@@ -24,7 +24,10 @@ create table if not exists pedido (
     id_cliente integer,
     id_produto integer,
     quantidade integer not null,
+    data datetime not null,
     primary key(id, id_cliente, id_produto),
     foreign key(id_cliente) references cliente(id),
     foreign key(id_produto) references produto(id)
 );
+
+select * from cliente;
